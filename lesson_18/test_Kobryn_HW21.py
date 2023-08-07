@@ -42,6 +42,7 @@ class TestLoginTest:
     def test_get_users_data(self):
         result = self.session.get(url="https://qauto2.forstudy.space/api/users/profile")
         print(f"Gets authenticated user profile data -> {result.json()}")
+        assert result.json()["status"] == "ok"
 
     def teardown_class(self):
         user_login = UserLoginModel(self.user.email, self.user.password, False)

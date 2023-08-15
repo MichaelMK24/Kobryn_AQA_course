@@ -1,0 +1,4 @@
+USER_BASE_EMAIL = "testuserforcar3@car.com"
+USER_BASE_PASSWORD = "Qwerty3563car1"
+TEST_USER_CORRECT_NAME = "Michael"
+TEST_USER_CORRECT_LASTNAME = "Kobryn"

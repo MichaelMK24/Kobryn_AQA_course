@@ -1,8 +1,8 @@
-from Kobryn_AQA_course.lesson_20.Kobryn_HW24 import UserCreatedByApi
-from Kobryn_AQA_course.lesson_20.constants.url_constants import DEFAULT_URL
-from Kobryn_AQA_course.lesson_20.facades.garage_facade import GarageFacade
-from Kobryn_AQA_course.lesson_20.facades.login_facade import LoginFacade
-from Kobryn_AQA_course.lesson_20.driver.custom_driver import Driver
+from ..facades.Kobryn_HW24 import UserCreatedByApi
+from ..constants.url_constants import DEFAULT_URL
+from ..facades.garage_facade import GarageFacade
+from ..facades.login_facade import LoginFacade
+from ..driver.custom_driver import Driver
 
 
 class TestBase:

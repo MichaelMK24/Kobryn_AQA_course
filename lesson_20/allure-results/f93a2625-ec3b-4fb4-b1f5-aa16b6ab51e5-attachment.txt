@@ -1,0 +1,2 @@
+SignUp request response -> {'status': 'ok', 'data': {'userId': 26986, 'photoFilename': 'default-user.png', 'distanceUnits': 'km', 'currency': 'usd'}}
+User's car is present -> True

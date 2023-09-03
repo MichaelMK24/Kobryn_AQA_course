@@ -1,7 +1,7 @@
-from Kobryn_AQA_course.lesson_20.pages.add_car_page import AddCarPageInGarage
-from Kobryn_AQA_course.lesson_20.pages.garage_page import GaragePage
-from Kobryn_AQA_course.lesson_20.pages.login_page import LoginPage
-from Kobryn_AQA_course.lesson_20.pages.navigation_bar_page import NavigationBarPage
+from ..pages.add_car_page import AddCarPageInGarage
+from ..pages.garage_page import GaragePage
+from ..pages.login_page import LoginPage
+from ..pages.navigation_bar_page import NavigationBarPage
 
 
 class BaseFacade:

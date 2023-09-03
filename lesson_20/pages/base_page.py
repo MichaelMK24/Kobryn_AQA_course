@@ -1,4 +1,4 @@
-from Kobryn_AQA_course.lesson_20.driver.custom_driver import Driver
+from ..driver.custom_driver import Driver
 
 
 class BasePage:

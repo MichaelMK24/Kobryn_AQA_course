@@ -1,8 +1,10 @@
-from Kobryn_AQA_course.lesson_20.constants.user_credentials import (
+import allure
+
+from ..constants.user_credentials import (
     USER_BASE_EMAIL,
     USER_BASE_PASSWORD,
 )
-from Kobryn_AQA_course.lesson_20.facades.base_facade import BaseFacade
+from .base_facade import BaseFacade
 
 
 class LoginFacade(BaseFacade):
@@ -19,13 +21,16 @@ class LoginFacade(BaseFacade):
         if is_click:
             self.click_login_button_on_login_form()
 
+    @allure.step("Login full cycle")
     def login_full_cycle(self, email=USER_BASE_EMAIL, password=USER_BASE_PASSWORD):
         self.click_sign_in_from_default_page()
         self.fill_all_fields_on_login_form(email, password)
 
+    @allure.step("set_email_field")
     def fill_email_field_on_login_form(self, email):
         self.login_page.email_field().send_keys(email)
 
+    @allure.step("set_password_field")
     def fill_password_field_on_login_form(self, password):
         self.login_page.password_field().send_keys(password)
 

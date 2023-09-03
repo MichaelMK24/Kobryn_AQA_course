@@ -1,5 +1,7 @@
-from Kobryn_AQA_course.lesson_20.constants.cars_mileage import CARS_MILEAGE
-from Kobryn_AQA_course.lesson_20.facades.base_facade import BaseFacade
+import allure
+from allure_commons.types import AttachmentType
+from ..constants.cars_mileage import CARS_MILEAGE
+from .base_facade import BaseFacade
 
 
 class GarageFacade(BaseFacade):
@@ -22,6 +24,7 @@ class GarageFacade(BaseFacade):
         if is_click:
             self.click_add_button_from_add_car_page()
 
+    @allure.step("Add Car to Garage full cycle")
     def add_car_to_garage_full_cycle(self, mileage=CARS_MILEAGE):
         self.click_add_car_button_from_garage_page()
         self.click_and_fill_all_fields_on_add_car_form(mileage)
@@ -29,15 +32,20 @@ class GarageFacade(BaseFacade):
     def click_brand_select_dropdown_from_add_car_page(self):
         self.add_car_page.brand_select_dropdown().click()
 
+    @allure.step("Select car brand")
     def click_brand_select_from_add_car_page(self):
         self.add_car_page.brand_select().click()
+        allure.attach(self.add_car_page._driver.get_screenshot_as_png(), name="Choose car brand from dropdown",
+                      attachment_type=AttachmentType.PNG)
 
     def click_model_select_dropdown_from_add_car_page(self):
         self.add_car_page.model_select_dropdown().click()
 
+    @allure.step("Select car model")
     def click_model_select_from_add_car_page(self):
         self.add_car_page.model_select().click()
 
+    @allure.step("fill_in_mileage_field")
     def fill_in_mileage_field_from_add_car_page(self, mileage):
         self.add_car_page.mileage_field().send_keys(mileage)
 

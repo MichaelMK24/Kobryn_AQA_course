@@ -1,0 +1,1 @@
+SignUp request response -> {'status': 'ok', 'data': {'userId': 27228, 'photoFilename': 'default-user.png', 'distanceUnits': 'km', 'currency': 'usd'}}
